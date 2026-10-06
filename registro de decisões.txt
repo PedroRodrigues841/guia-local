@@ -1,0 +1,30 @@
+REGISTRO DE DECISÕES DE LAYOUT
+
+- Página inicial: em telas pequenas, o conteúdo fica em uma coluna. A partir de 820px, a barra lateral aparece ao lado. Testei larguras de 200px a 1440px e não encontrei rolagem horizontal.
+
+- Cartões: as colunas se ajustam ao espaço disponível. Em telas estreitas, fica uma coluna; em telas maiores, cabem mais.
+
+- Cabeçalho: em telas pequenas, o título e o resumo ficam um abaixo do outro. A partir de 820px, aparecem lado a lado. Os links do menu podem quebrar de linha.
+
+- Página de detalhes: ajustei as margens e as listas para evitar que palavras longas aumentem a largura da página. As tabelas e imagens também respeitam o espaço disponível.
+
+- Seções de detalhes: em telas maiores, as informações ficam em duas colunas. Em telas menores, ficam uma abaixo da outra para facilitar a leitura.
+
+- Animações e sombras: reduzi esses efeitos para deixar a página mais simples e evitar distrações.
+
+- Telas muito estreitas: deixei os cartões mais compactos e reduzi os títulos em telas de até 240px para evitar que o conteúdo ultrapasse a largura da página.
+
+TIPOGRAFIA, MÍDIA E ACESSIBILIDADE — 2026
+
+Medidas compartilhadas:
+- Título da vitrine: clamp(2rem, 1.25rem + 3vw, 3rem) = 32px em 360px e 48px em 1280px.
+- Título do local: clamp(1.5rem, 1.25rem + 1.5vw, 2rem) = 25,4px em 360px e 32px em 1280px.
+- Imagens: regra global max-width: 100% e height: auto. Não há caixas com recorte fixo; por isso object-fit não é necessário.
+- Todos os arquivos já tinham meta viewport. Links de navegação e ações medidos têm pelo menos 44px; o foco de teclado usa :focus-visible.
+- Em 360px e 1280px, as seis páginas não apresentaram rolagem horizontal.
+
+| Página | Folha de estilos única resolveu sozinha | Próprio da página e auditoria |
+|---|---|---|
+| index.html e centenario/index.html | Títulos fluidos, foco, alvos de toque e regra universal de imagem. | Viewport já existia; sem imagem própria. Axe WCAG 2.1 A/AA: 17 verificações aprovadas, 0 violações em cada cópia. |
+| detalhe.html e centenario/detalhe.html | Títulos fluidos, foco, alvos de toque e regra universal de imagem. | Viewport já existia; foto do parque tem alt e crédito CC BY 2.0. Axe: 20 verificações aprovadas, 0 violações em cada cópia. |
+| guia-centenario.html e centenario/guia-centenario.html | Títulos fluidos, foco, alvos de toque e regra universal de imagem. | Corrigido o caminho da foto ausente; contraste do subtítulo corrigido em header > .titulo. Axe: 15 verificações aprovadas, 0 violações em cada cópia. |
