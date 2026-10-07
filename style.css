@@ -63,6 +63,14 @@ nav a {
   color: #fff;
 }
 
+.cabecalho > nav {
+  margin-left: auto;
+}
+
+.cabecalho .menu {
+  gap: 0.5rem 0.75rem;
+}
+
 .identidade {
   min-width: 0;
 }
